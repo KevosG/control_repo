@@ -12,6 +12,10 @@ class minecraft {
     ensure => present,
   }
   
+  package {'openjdk-17-jdk':
+    ensure => present,
+  }
+  
   file {'/opt/minecraft/eula.txt':
     ensure => file,
     content => 'eula=true',
